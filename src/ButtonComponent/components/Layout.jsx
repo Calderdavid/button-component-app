@@ -1,50 +1,26 @@
 import React from 'react'
-import { Grid, Typography, Link, Button } from '@mui/material'
+import { Grid, Typography, Link } from '@mui/material'
 
 
-export const Layout = (props) => {
-
-    const {variant, color, background, txt} = props;
-
-    console.log(variant, color, background, txt);
-
-    const convertTxt = (txt) => {
-        const convertString = txt;
-
-        return convertString;
-    }
+export const Layout = () => {
 
 
     return (
         <>
-            <Grid container direction="row" sx={{mt: 5}} justifyContent="space-between">
-                <Grid item>
-                    <Grid item>
-                        <Typography variant="p">
-                            {
-                                convertTxt('<Button />')
-                            }
-                        </Typography>
-                    </Grid>
+            <Grid item xs={2} sx={{ml: 2}}>
+                <Grid container direction="column" sx={{mt: 2}}>
+                    
+                    <Typography variant="h5" sx={{mb: 12}} color="#F7542E">
+                        Devchallenges.io
+                    </Typography>
 
-                    <Grid item sx={{mt: 1}}>
-                        <Button variant="contained" sx={{color: '#3F3F3F', backgroundColor: '#E0E0E0'}}>Default</Button>
-                    </Grid>
-                </Grid>      
-
-                <Grid item>
-                    <Grid item>
-                        <Typography variant="p">
-                            {
-                                convertTxt('&:hover, &:focus')
-                            }
-                        </Typography>
-                    </Grid>
-
-                    <Grid item sx={{mt: 1}}>
-                        <Button variant="contained" disabled sx={{color: '#3F3F3F', backgroundColor: '#AEAEAE'}}>Default</Button>                                
-                    </Grid>
-                </Grid>   
+                    <Link href="/Colors" sx={{mb: 6}} underline="none" color="#9E9E9E">Colors</Link>
+                    <Link href="/Typography" sx={{mb: 6}} underline="none" color="#9E9E9E">Typography</Link>
+                    <Link href="/Spaces" sx={{mb: 6}} underline="none" color="#9E9E9E">Spaces</Link>
+                    <Link href="/Buttons" sx={{mb: 6}} underline="none" color="#9E9E9E">Buttons</Link>
+                    <Link href="/Inputs" sx={{mb: 6}} underline="none" color="#9E9E9E">Inputs</Link>
+                    <Link href="/Grid" sx={{mb: 6}} underline="none" color="#9E9E9E">Grid</Link>
+                </Grid>
 
             </Grid>
         </>
